@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Atlas Magazine placeholder</title>
+  <desc id="desc">Editorial abstract placeholder image.</desc>
+  <rect width="1200" height="800" fill="#f5f0e8"/>
+  <path d="M90 112h1020v576H90z" fill="#fffaf1" stroke="#211a14" stroke-width="10"/>
+  <path d="M150 178h360v440H150z" fill="#2f5d50"/>
+  <path d="M560 180h480v44H560zm0 88h420v22H560zm0 54h360v22H560zm0 184h480v18H560zm0 48h320v18H560z" fill="#211a14"/>
+  <circle cx="330" cy="398" r="116" fill="#d28d47"/>
+</svg>

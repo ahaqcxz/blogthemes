@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Inkline Knowledge placeholder</title>
+  <desc id="desc">Knowledge-base abstract placeholder image.</desc>
+  <rect width="1200" height="800" fill="#f6f7f4"/>
+  <path d="M150 150h900v500H150z" fill="#ffffff" stroke="#1e2a32" stroke-width="8"/>
+  <path d="M230 230h250v30H230zm0 72h740v18H230zm0 52h620v18H230zm0 52h700v18H230zm0 116h340v18H230z" fill="#1e2a32"/>
+  <path d="M806 232h150v150H806z" fill="#6d8f71"/>
+  <path d="M830 430h126v28H830zm0 52h92v18h-92z" fill="#b65c45"/>
+</svg>
