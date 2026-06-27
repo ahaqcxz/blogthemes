@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="No image">
+  <rect width="960" height="600" fill="#e8f1ed"/>
+  <path d="M132 420c108-112 205-168 292-168 71 0 126 37 185 76 54 36 111 74 199 76v68H132z" fill="#d9b86c" opacity=".55"/>
+  <path d="M120 338c72-68 139-102 201-102 50 0 91 21 131 42 44 23 86 45 144 35 58-10 121-53 189-129v254H120z" fill="#19766b" opacity=".78"/>
+  <circle cx="720" cy="148" r="54" fill="#fbfaf7"/>
+  <text x="480" y="515" fill="#202124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle">YKDB</text>
+</svg>

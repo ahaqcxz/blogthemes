@@ -1,0 +1,50 @@
+蜜糖模板说明
+
+目录名：mellow
+后台显示名：蜜糖模板
+风格：奶油花园风，柔和、优美、清甜可爱，适合生活随笔、图文记录和经验分享。
+
+文件作用：
+
+theme.json
+模板信息，后台模板管理会读取这里的 id、名称、版本、作者和简介。
+
+head.php
+页面头部、SEO 信息、favicon、主题 CSS、顶部导航和移动端搜索入口。
+
+foot.php
+页面底部、侧边栏引用、RSS 链接、响应时间和搜索跳转脚本。
+
+index.php
+首页、分页、分类、标签、搜索结果统一列表页。
+
+read.php
+文章详情页，包含标题、元信息、正文、加密文章解锁、上一篇/下一篇和评论入口。
+
+bbs.php
+留言板页面，复用 comment.php。
+
+links.php
+友链导航页面。
+
+error.php
+错误页和 404 兜底页面。
+
+comment.php
+评论列表、回复和评论表单。
+
+sidebar.php
+侧边栏，包含搜索、最新文章、热门文章、标签和站点信息。
+
+post-card.php
+文章列表中的单篇文章卡片。
+
+assets/css/style.css
+模板样式文件。
+
+assets/img/nopic.svg
+文章没有封面时使用的默认占位图。
+
+不需要创建：
+password.php - 全站访问密码页由 public/access.php 统一处理。
+sort.php、tag.php、search.php - 分类、标签、搜索都由 index.php 统一处理。

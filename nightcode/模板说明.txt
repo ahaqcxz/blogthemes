@@ -1,0 +1,25 @@
+夜码模板 nightcode
+
+风格定位：
+深色开发者风，黑底高对比，青绿和蓝色强调。适合技术站点、代码笔记、夜间阅读。
+
+文件作用：
+theme.json              模板基础信息，后台模板管理读取这里
+head.php                页面头部、SEO、导航、移动端搜索、CSS 引入
+foot.php                页面底部、侧边栏调用、页脚、搜索 JS、统计代码
+index.php               首页、分页、分类、标签、搜索列表统一入口
+read.php                文章详情页、加密文章、版权信息、上一篇下一篇
+post-card.php           列表中的单篇文章卡片
+sidebar.php             搜索、最新文章、热门文章、标签、站点运行信息
+comment.php             评论列表、回复和评论表单
+bbs.php                 留言板页面，复用评论模块
+links.php               友链导航页面
+error.php               错误页
+assets/css/style.css    模板样式
+assets/img/nopic.svg    默认占位封面
+
+页面说明：
+分类、标签、搜索列表都写在 index.php 内，不需要 sort.php、tag.php、search.php。
+模板只使用系统自带字体，不额外接入字体文件。
+
+全站访问密码页由系统统一提供，模板不需要编写 password.php。

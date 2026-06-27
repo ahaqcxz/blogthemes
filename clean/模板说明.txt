@@ -1,0 +1,41 @@
+清简模板说明
+
+目录名：clean
+后台名称：清简模板
+
+这是一套偏内容阅读型的简约模板。分类页、标签页、搜索页都在 index.php 中编写，不单独创建 sort.php、tag.php、search.php。
+
+文件作用：
+
+theme.json              模板信息
+head.php                公共头部、SEO、导航、CSS 引用、页面容器开头
+foot.php                公共底部、页脚、统计代码、公共 JS、页面容器结束
+index.php               首页、分页、分类、标签、搜索结果列表
+post-card.php           列表中的单篇文章卡片
+read.php                文章详情页
+comment.php             评论列表和评论表单
+sidebar.php             侧边栏
+bbs.php                 留言板
+links.php               友链导航
+error.php               错误页
+assets/css/style.css    模板样式
+assets/img/nopic.svg    默认无图占位图
+
+index.php 中可用这些变量判断列表类型：
+
+$category        当前是分类页
+$tag             当前是标签页
+$keyword         当前是搜索结果页
+
+模板资源使用：
+
+theme_asset('assets/css/style.css')
+theme_asset('assets/img/nopic.svg')
+
+模板文件引用：
+
+include theme_file('head.php');
+include theme_file('foot.php');
+include theme_file('comment.php');
+
+全站访问密码页由系统统一提供，模板不需要编写 password.php。

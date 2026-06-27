@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Hacklab placeholder">
+  <rect width="640" height="420" fill="#05070a"/>
+  <rect x="42" y="44" width="556" height="332" rx="8" fill="#0b1117" stroke="#173423" stroke-width="2"/>
+  <circle cx="76" cy="74" r="8" fill="#ff5f56"/>
+  <circle cx="104" cy="74" r="8" fill="#f5c542"/>
+  <circle cx="132" cy="74" r="8" fill="#00ff88"/>
+  <text x="72" y="150" fill="#00ff88" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="28">$ open image</text>
+  <text x="72" y="205" fill="#8b9aaa" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22">status: placeholder</text>
+  <text x="72" y="250" fill="#00d9ff" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22">render: no cover found</text>
+  <path d="M72 300h390" stroke="#00ff88" stroke-width="6" stroke-linecap="round"/>
+  <path d="M72 330h250" stroke="#00d9ff" stroke-width="6" stroke-linecap="round"/>
+</svg>

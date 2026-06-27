@@ -1,0 +1,54 @@
+栖川模板
+
+定位：
+轻杂志 + 内容索引风格。适合技术文章、教程合集、经验分享、生活随笔混合的网站。
+
+文件作用：
+
+theme.json
+模板信息文件，后台模板管理通过它识别模板名称、版本、作者和简介。
+
+head.php
+页面头部。负责 SEO meta、主题 CSS、favicon、顶部品牌、分类导航、搜索按钮和移动端导航。
+
+foot.php
+页面底部。负责页脚版权、备案、RSS、执行时间和站点搜索脚本。
+
+index.php
+首页、分页、分类列表、标签列表、搜索结果统一入口。分类、标签、搜索不再单独写 sort.php、tag.php、search.php。
+
+post-card.php
+文章列表中的单篇文章卡片。支持 $isFeaturePost，首页第一页首篇文章会显示为更醒目的杂志式大卡片。
+
+read.php
+文章详情页。负责文章标题区、加密文章密码表单、正文、版权信息、上一篇/下一篇和评论区。
+
+comment.php
+评论模块。负责评论列表、子评论、站长回复、回复按钮、验证码和评论表单。
+
+sidebar.php
+侧边栏索引。包含搜索、分类索引、标签、热门文章和站点统计。
+
+bbs.php
+留言板页面。复用 comment.php，post_id 为 0。
+
+links.php
+友链导航页面。显示后台配置的常用导航和友情链接。
+
+error.php
+错误页。用于 404、文件无法访问、文章不存在等状态。
+
+
+assets/css/style.css
+模板样式文件。只影响前台 default 模板。
+
+assets/img/nopic.svg
+无封面文章的默认占位图。
+
+开发约定：
+1. 不创建 sort.php、tag.php、search.php，这些页面都在 index.php 内判断 $category、$tag、$keyword。
+2. 模板内引用图片、CSS 请使用 theme_asset('assets/...')。
+3. 模板内 include 其他模板文件请使用 theme_file('xxx.php')。
+4. 卡片圆角控制在 8px 以内，保持轻杂志阅读风格。
+
+全站访问密码页由系统统一提供，模板不需要编写 password.php。

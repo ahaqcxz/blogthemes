@@ -1,0 +1,112 @@
+默认模板编写说明
+
+这个目录是系统默认前台模板。后期新增模板时，可以复制整个 themes/default/ 目录，改成新的模板 ID，例如：
+
+themes/simple/
+themes/news/
+themes/dark/
+
+每个模板必须包含 theme.json，模板 ID 必须和目录名一致，只能使用字母、数字、下划线、短横线。
+
+
+一、文件作用
+
+theme.json              模板信息，后台模板管理会读取这里的名称、版本、作者和简介
+preview.png             模板预览图，可选，没有也不影响使用
+
+head.php                公共头部，负责 HTML head、SEO 标签、导航、CSS 引用和页面主容器开头
+foot.php                公共底部，负责关闭页面主容器、侧边栏、页脚、统计代码和公共 JS
+
+index.php               列表页模板：首页、普通分页、分类页、标签页、搜索结果页都在这里编写
+read.php                文章详情页
+bbs.php                 留言板页面
+links.php               友链导航页面
+error.php               404、文件不可访问等错误页面
+comment.php             评论列表、回复和评论表单模块
+sidebar.php             侧边栏模块
+post-card.php           文章列表中的单篇文章卡片
+
+assets/css/style.css    当前模板的前台样式
+assets/img/nopic.svg    当前模板的默认无图占位图
+
+
+二、常用写法
+
+页面模板通常这样写：
+
+<?php include theme_file('head.php'); ?>
+
+页面主体内容
+
+<?php include theme_file('foot.php'); ?>
+
+
+引用当前模板资源：
+
+<link rel="stylesheet" href="<?= h(theme_asset('assets/css/style.css')) ?>">
+<img src="<?= h(theme_asset('assets/img/nopic.svg')) ?>" alt="">
+
+
+引用其他模板文件：
+
+<?php include theme_file('comment.php'); ?>
+<?php include theme_file('sidebar.php'); ?>
+
+
+theme_file() 会自动回退：当前模板文件不存在时，先找 default 模板。
+
+
+三、可用变量
+
+模板文件中可以直接使用这些变量：
+
+$settings        站点设置
+$site            通常在 head.php 中等于 $settings
+$title           当前页面标题
+$seo             当前页面 SEO 信息
+$path            当前访问路径
+$view            当前页面类型
+$page            当前分页页码
+$ids             当前列表页文章 ID
+$singlePost      文章详情页文章数据
+$category        当前分类
+$tag             当前标签
+$keyword         当前搜索关键词
+$messageBoard    是否留言板页面
+$linksPage       是否友链页面
+$errorTitle      错误页标题
+$errorMessage    错误页正文
+$errorHint       错误页提示
+
+index.php 中判断列表类型：
+
+if ($category)      当前是分类页
+if ($tag)           当前是标签页
+if ($keyword !== '') 当前是搜索结果页
+以上都不是时，就是首页或普通分页列表。
+
+
+四、常用系统函数
+
+h($value)                    HTML 转义
+theme_file('read.php')       获取模板文件路径
+theme_asset('assets/...')    获取模板资源 URL
+post_cover_url($post)        获取文章封面，支持本地/GitHub 来源切换
+excerpt_text($text)          截取摘要
+display_date($key)           格式化时间
+Blog::categories()           分类列表
+Blog::tags()                 标签列表
+Blog::latestPosts()          最新文章
+Blog::hotPosts()             热门文章
+
+
+五、注意事项
+
+1. 模板只影响前台，不影响后台。
+2. 新模板建议保留 head.php、foot.php、index.php、read.php、error.php。
+3. 资源文件放在当前模板的 assets/ 目录下。
+4. 后台“图床存储”的静态资源同步会同步 themes/*/assets/。
+5. 如果启用 GitHub/CDN 静态来源，但新模板资源还没有同步，系统会自动回退本地资源。
+6. 不要在模板中直接写死后台地址；后台地址可能在后台设置中修改。
+
+全站访问密码页由系统统一提供，模板不需要编写 password.php。
