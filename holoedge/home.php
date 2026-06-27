@@ -1,7 +1,9 @@
 <?php include theme_file('head.php'); ?>
 <?php
 $stats = Blog::siteStats();
-$latest = Blog::latestPosts(9);
+$latest = array_values(array_filter(array_map(function ($post) {
+    return table('posts')->find((int)($post['id'] ?? 0));
+}, Blog::latestPosts(9))));
 $hot = Blog::hotPosts(5);
 $categories = Blog::categories();
 $tags = Blog::tags();
@@ -36,9 +38,9 @@ $updatedAt = $stats['latest_updated_at'] ?? ($stats['latest_created_at'] ?? '');
         <div class="focus-copy">
             <p class="eyebrow">FOCUS ARTICLE</p>
             <h2><a href="/read/<?= (int)$feature['id'] ?>.html"><?= h($feature['title']) ?></a></h2>
-            <p><?= h($feature['summary'] ?: excerpt_text($feature['markdown'] ?: $feature['html'], 190)) ?></p>
+            <p><?= h(($feature['summary'] ?? '') ?: excerpt_text(($feature['markdown'] ?? '') ?: ($feature['html'] ?? ''), 190)) ?></p>
             <div class="holo-tags">
-                <a href="/sort/<?= (int)$feature['category_id'] ?>.html"><?= h(Blog::categoryName($feature['category_id'])) ?></a>
+                <a href="/sort/<?= (int)($feature['category_id'] ?? 0) ?>.html"><?= h(Blog::categoryName($feature['category_id'] ?? 0)) ?></a>
                 <span><?= h(display_date($feature['created_at'], 'Y-m-d')) ?></span>
             </div>
         </div>
@@ -61,7 +63,7 @@ $updatedAt = $stats['latest_updated_at'] ?? ($stats['latest_created_at'] ?? '');
                 <a href="/read/<?= (int)$post['id'] ?>.html">
                     <time><?= h(display_date($post['created_at'], 'm.d')) ?></time>
                     <strong><?= h($post['title']) ?></strong>
-                    <span><?= h(Blog::categoryName($post['category_id'])) ?></span>
+                    <span><?= h(Blog::categoryName($post['category_id'] ?? 0)) ?></span>
                 </a>
             <?php endforeach; ?>
         </div>
