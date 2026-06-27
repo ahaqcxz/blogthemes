@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="HoloEdge placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.55" stop-color="#102a46"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#g)"/>
+  <path d="M112 388 324 174l126 118 92-84 306 180" fill="none" stroke="#8cecff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="670" cy="164" r="48" fill="#c9b8ff" opacity=".9"/>
+  <rect x="138" y="92" width="684" height="356" rx="8" fill="none" stroke="#f8fbff" stroke-opacity=".72" stroke-width="3"/>
+  <text x="480" y="476" text-anchor="middle" fill="#f8fbff" font-family="system-ui, sans-serif" font-size="34">HOLOGRAPHIC IMAGE</text>
+</svg>

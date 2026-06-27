@@ -1,0 +1,12 @@
+赛博矩阵 cybergrid
+==================
+
+深色霓虹 HUD 风模板。首页是控制台首屏，不使用传统博客侧边栏。
+
+特色：
+- home.php：站点状态、核心文章、分类矩阵、最新数据流、热门扫描。
+- category.php/tag.php/search.php：统一为数据终端列表。
+- read.php：文章详情像打开一个数据包。
+- CSS 带入场动画、扫描线、HUD 边框，并支持 prefers-reduced-motion。
+
+不包含 password.php，全站加密页由系统统一处理。

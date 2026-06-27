@@ -1,0 +1,12 @@
+全息边界 holoedge
+=================
+
+冷白与深海黑混合的全息科技模板。首页是全息信息舱，列表页是光幕式内容索引。
+
+特色：
+- home.php：站点导语、核心文章、分类光幕、最新模块、热门阅读、标签星云。
+- category.php/tag.php/search.php：统一为半透明光幕列表。
+- read.php：文章详情偏科技产品文档气质。
+- CSS 带柔和入场过渡、光边、折射 hover，并支持 prefers-reduced-motion。
+
+不包含 password.php，全站加密页由系统统一处理。

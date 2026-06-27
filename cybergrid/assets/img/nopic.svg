@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="CyberGrid placeholder">
+  <rect width="960" height="540" fill="#05070a"/>
+  <path d="M0 90h960M0 180h960M0 270h960M0 360h960M0 450h960M120 0v540M240 0v540M360 0v540M480 0v540M600 0v540M720 0v540M840 0v540" stroke="#102a34" stroke-width="2"/>
+  <rect x="178" y="128" width="604" height="284" rx="8" fill="none" stroke="#00d9ff" stroke-width="4"/>
+  <path d="M226 324h152l60-92 88 142 54-84h154" fill="none" stroke="#00ff88" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="618" cy="194" r="38" fill="#f5c542"/>
+  <text x="480" y="466" text-anchor="middle" fill="#8b9aaa" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="34">NO SIGNAL IMAGE</text>
+</svg>
